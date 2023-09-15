@@ -1,0 +1,7 @@
+---
+- name: Print vars
+  hosts: all
+  tasks:
+    - name: Print vars
+      debug:
+        msg: "inventory_hostname = {{ inventory_hostname }} ansible_facts['fqdn'] = {{ansible_facts['fqdn'] }}"

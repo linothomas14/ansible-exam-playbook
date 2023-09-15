@@ -1,0 +1,49 @@
+---
+
+- name: Create index file on host dev group
+  hosts: dev
+  become: yes
+  tasks:
+    - name: create webdev group
+      group:
+        name: webdev
+        state: present
+    
+    - name: create webdev user
+      user:
+        name: webdev
+        group: webdev
+
+    - name: create folder
+      file:
+        path: /webdev
+        state: directory
+        owner: webdev
+        group: webdev
+        mode: '2755'
+
+    - name: Create /var/www/html/webdev
+      file:
+        path: /var/www/html/webdev
+        owner: webdev
+        group: webdev
+        force: yes
+        state: directory
+    
+    - name: Create a symbolic link
+      file:
+        src: /webdev
+        dest: /var/www/html/webdev
+        owner: webdev
+        group: webdev
+        force: yes
+        state: link
+
+    - name: create file index.html
+      copy:
+        content: |
+          DEVELOPMENT
+        dest: /webdev/index.html
+        setype: httpd_sys_content_t
+
+

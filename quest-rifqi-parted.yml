@@ -1,0 +1,32 @@
+---
+- name: Quest dari rifqi, partisi disk
+  hosts: all
+  become: true
+  tasks:
+    - block:
+      - name: Buat partisi di disk /dev/vdb
+        parted:
+          device: /dev/vdb
+          number: 1
+          state: present
+          fs_type: ext4
+          part_start: 1500MiB
+      rescue:
+        - name: RESCUE debug not enough
+          debug:
+            msg: "There is not enough size"
+
+        - name: Buat partisi 800MiB di disk /dev/vdb
+          parted:
+            device: /dev/vdb
+            number: 1
+            state: present
+            fs_type: ext4
+            part_start: 800MiB
+
+    - name: Mount an NFS volume
+      ansible.posix.mount:
+        src: /dev/vdb1
+        path: /mnt/vdb1_ygy
+        state: mounted
+        fstype: ext4

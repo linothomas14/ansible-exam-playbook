@@ -1,0 +1,37 @@
+---
+- name: Create group
+  hosts: all
+  become: true
+  vars_files:
+    - userslist.yml
+    - lock.yml
+  tasks:
+    - name: create group
+      group:
+        name: "{{ item }}"
+        state: present
+      loop: 
+        - dev
+        - managers
+        - devops
+  
+    - name: Create user managers
+      user:
+        name: "{{ item.username }}"
+        group: managers
+        password: "{{ pw_mgr | password_hash('sha512') }}"
+      with_items: "{{ users }}"
+      when: 
+        - item.job == 'manager'
+        - inventory_hostname in groups['proxy']
+  
+    - name: Create user dev
+      user:
+        name: "{{ item.username }}"
+        group: devops
+        password: "{{ pw_dev | password_hash('sha512') }}"
+      with_items: "{{ users }}"
+      when: 
+        - item.job == 'developer'
+        - inventory_hostname in groups['dev']
+    

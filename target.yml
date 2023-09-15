@@ -1,0 +1,7 @@
+---
+- name: modify targetuser
+  hosts: all
+  become: yes
+  tasks:
+    - name: modify target
+      command: systemctl set-default multi-user.target

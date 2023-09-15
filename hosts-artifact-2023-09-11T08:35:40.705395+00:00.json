@@ -1,0 +1,289 @@
+{
+    "plays": [
+        {
+            "__play_name": "Copy template",
+            "name": "Copy template",
+            "pattern": "all",
+            "play": "Copy template",
+            "play_pattern": "all",
+            "play_uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009",
+            "playbook": "/home/student/exercise-from-gdrive/hosts.yml",
+            "playbook_uuid": "e14e2299-cb03-4c45-a0b2-e3ab55e52749",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "servera.lab.example.com",
+                    "__number": 0,
+                    "__result": "Failed",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 1.632326,
+                    "end": "2023-09-11T08:35:40.172342",
+                    "event_loop": null,
+                    "host": "servera.lab.example.com",
+                    "ignore_errors": null,
+                    "play": "Copy template",
+                    "play_pattern": "all",
+                    "play_uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009",
+                    "playbook": "/home/student/exercise-from-gdrive/hosts.yml",
+                    "playbook_uuid": "e14e2299-cb03-4c45-a0b2-e3ab55e52749",
+                    "remote_addr": "servera.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "Missing sudo password"
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2023-09-11T08:35:38.540016",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/exercise-from-gdrive/hosts.yml:2",
+                    "task_uuid": "c6be38c7-6fc1-c9dd-faf6-00000000000f",
+                    "uuid": "4400aed0-3c1d-484d-ae24-c2fc4ebc92fd"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "serverb.lab.example.com",
+                    "__number": 1,
+                    "__result": "Failed",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 1.598482,
+                    "end": "2023-09-11T08:35:40.162755",
+                    "event_loop": null,
+                    "host": "serverb.lab.example.com",
+                    "ignore_errors": null,
+                    "play": "Copy template",
+                    "play_pattern": "all",
+                    "play_uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009",
+                    "playbook": "/home/student/exercise-from-gdrive/hosts.yml",
+                    "playbook_uuid": "e14e2299-cb03-4c45-a0b2-e3ab55e52749",
+                    "remote_addr": "serverb.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "Missing sudo password"
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2023-09-11T08:35:38.564273",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/exercise-from-gdrive/hosts.yml:2",
+                    "task_uuid": "c6be38c7-6fc1-c9dd-faf6-00000000000f",
+                    "uuid": "11f6b105-5769-48ba-8c75-1b94334eb250"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "serverc.lab.example.com",
+                    "__number": 2,
+                    "__result": "Failed",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 1.567982,
+                    "end": "2023-09-11T08:35:40.150116",
+                    "event_loop": null,
+                    "host": "serverc.lab.example.com",
+                    "ignore_errors": null,
+                    "play": "Copy template",
+                    "play_pattern": "all",
+                    "play_uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009",
+                    "playbook": "/home/student/exercise-from-gdrive/hosts.yml",
+                    "playbook_uuid": "e14e2299-cb03-4c45-a0b2-e3ab55e52749",
+                    "remote_addr": "serverc.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "Missing sudo password"
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2023-09-11T08:35:38.582134",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/exercise-from-gdrive/hosts.yml:2",
+                    "task_uuid": "c6be38c7-6fc1-c9dd-faf6-00000000000f",
+                    "uuid": "6a454db8-0d5f-4262-beae-9b09925beff4"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "serverd.lab.example.com",
+                    "__number": 3,
+                    "__result": "Failed",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 1.574899,
+                    "end": "2023-09-11T08:35:40.175289",
+                    "event_loop": null,
+                    "host": "serverd.lab.example.com",
+                    "ignore_errors": null,
+                    "play": "Copy template",
+                    "play_pattern": "all",
+                    "play_uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009",
+                    "playbook": "/home/student/exercise-from-gdrive/hosts.yml",
+                    "playbook_uuid": "e14e2299-cb03-4c45-a0b2-e3ab55e52749",
+                    "remote_addr": "serverd.lab.example.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "Missing sudo password"
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2023-09-11T08:35:38.600390",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student/exercise-from-gdrive/hosts.yml:2",
+                    "task_uuid": "c6be38c7-6fc1-c9dd-faf6-00000000000f",
+                    "uuid": "75517c3e-1f23-4aef-89e1-c922698aee39"
+                }
+            ],
+            "uuid": "c6be38c7-6fc1-c9dd-faf6-000000000009"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/exercise-from-gdrive/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/exercise-from-gdrive/hosts.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/exercise-from-gdrive"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "utility.lab.example.com/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/exercise-from-gdrive/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Ansible configuration file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/.ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "",
+        "PLAY [Copy template] ***********************************************************",
+        "",
+        "TASK [Gathering Facts] *********************************************************",
+        "\u001b[0;31mfatal: [serverc.lab.example.com]: FAILED! => {\"msg\": \"Missing sudo password\"}\u001b[0m",
+        "\u001b[0;31mfatal: [serverb.lab.example.com]: FAILED! => {\"msg\": \"Missing sudo password\"}\u001b[0m",
+        "\u001b[0;31mfatal: [servera.lab.example.com]: FAILED! => {\"msg\": \"Missing sudo password\"}\u001b[0m",
+        "\u001b[0;31mfatal: [serverd.lab.example.com]: FAILED! => {\"msg\": \"Missing sudo password\"}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mservera.lab.example.com\u001b[0m    : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;31mserverb.lab.example.com\u001b[0m    : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;31mserverc.lab.example.com\u001b[0m    : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;31mserverd.lab.example.com\u001b[0m    : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

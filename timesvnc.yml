@@ -1,0 +1,12 @@
+---
+- name: timesync
+  hosts: all
+  become: true
+  vars:
+    timesync_ntp_servers:
+      - hostname: 0.uk.pool.ntp.org
+        iburst: yes
+  roles:
+    - linux-system-roles.timesync
+        
+

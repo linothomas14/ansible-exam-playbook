@@ -1,0 +1,26 @@
+---
+- name: Task create report file
+  hosts: all
+  become: true
+  tasks:
+    - name: 
+      copy:
+        dest: /root/report.txt
+        content: |
+          HOSTNAME= {{ ansible_fqdn | default('NONE', true) }}
+          OS= {{ ansible_distribution  | default('NONE', true) }}
+          MEM= {{ ansible_memtotal_mb  | default('NONE', true) }}
+          VDA= {{ ansible_devices.vda.size | default('NONE', true) }}
+          VDB= {{ ansible_devices.vdb.size | default('NONE', true) }}
+
+- name: print
+  hosts: dev
+  become: true
+  tasks:
+    - name: get report.txt value
+      command: cat /root/report.txt
+      register: output
+
+    - name: print
+      debug:
+        var: output.stdout_lines

@@ -1,0 +1,10 @@
+users:
+  - username: admin
+    group: admin
+    job: devops
+  - username: lino
+    group: admin
+    job: devops
+  - username: manager
+    group: manager
+    job: manager

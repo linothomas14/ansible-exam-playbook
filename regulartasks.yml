@@ -1,0 +1,18 @@
+---
+- name: Create cron job
+  hosts: all
+  become: true
+  tasks:
+    - name: Create job
+      cron:
+       name: datejob
+       hour: 12
+       job: date >> /root/datefile
+
+    - name: get datefile
+      command: cat /root/datefile
+      register: result
+
+    - name: print result
+      debug:
+        var: result

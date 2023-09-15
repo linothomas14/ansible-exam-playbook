@@ -1,0 +1,25 @@
+---
+# tasks file for sample-apache
+- name: Enable n start httpd
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+
+- name: enable n start firewalld
+  service:
+    name: firewalld
+    state: started
+    enabled: yes
+    
+- name: enable http
+  ansible.posix.firewalld:
+    service: http
+    state: enabled
+    permanent: true
+    immediate: true
+
+- name: copy template index.html
+  template:
+    dest: /var/www/html/index.html
+    src: index.html.j2

@@ -1,0 +1,8 @@
+---
+
+- name: Check facts
+  hosts: dev
+  tasks:
+    - name: print
+      debug: 
+        msg: "{{ ansible_facts }}"

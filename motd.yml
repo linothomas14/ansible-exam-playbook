@@ -1,0 +1,17 @@
+---
+- name: Create MOTD Files
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create MOTD Files
+      copy:
+        force: yes
+        content: |
+            {% if inventory_hostname in groups['dev'] %}
+            Welcome to Dev Server {{ansible_facts['fqdn']}}
+            {% elif inventory_hostname in groups['webservers'] %}
+            Welcome to Apache Server {{ansible_facts['fqdn']}}
+            {% elif inventory_hostname in groups['test'] %}
+            Welcome to Test Server {{ansible_facts['fqdn']}}
+            {% endif %}
+        dest: /etc/motd

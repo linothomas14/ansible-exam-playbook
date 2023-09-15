@@ -1,0 +1,16 @@
+---
+- name: create issue file
+  hosts: all
+  become: yes
+  tasks:
+    - name: create issue file
+      copy:
+        dest: /etc/issue
+        content: |
+          {% if (inventory_hostname in groups['dev']) %}
+           Development
+          {% elif inventory_hostname in groups['test'] %}
+           Test
+          {% elif inventory_hostname in groups['prod'] %}
+           Production
+          {% endif %}

@@ -1,0 +1,30 @@
+---
+
+- name: Install packages
+  hosts: dev,prod,webservers
+  become: yes
+  vars:
+    packages:
+      - httpd
+      - mod_ssl
+      - mariadb
+  tasks:
+    - name: installing package
+      package:
+        name: "{{ packages }}"
+        state: present
+
+    - name: enabled and start service
+      service:
+        name: httpd
+        enabled: true
+        state: started
+
+- name: install n update on dev hosts
+  hosts: dev
+  become: yes
+  tasks:
+    - name: install development tools
+      package:
+        name:
+          - "@Development Tools"
